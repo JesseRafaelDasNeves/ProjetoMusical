@@ -28,7 +28,7 @@ void exibirOpcoesMenu() {
     Console.WriteLine("Digite 4 para exibir a média de uma banda");
     Console.WriteLine("Digite -1 para sair");
 
-    Console.Write("\nDigite a sua opção");
+    Console.Write("\nDigite uma opção ");
     int opcaoEscolhida = int.Parse(Console.ReadLine()!);
 
     switch (opcaoEscolhida) {
