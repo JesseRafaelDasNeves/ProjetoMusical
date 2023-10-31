@@ -1,7 +1,6 @@
 ﻿//  Screen Sound
-string mensagemBoasVindas = "Boas vindas ao Sreen Sound";
-
 void exibirMensagemBoasVindas() {
+    string mensagemBoasVindas = "Boas vindas ao Sreen Sound";
     //Verbatim Literal
     Console.WriteLine(@"
     
