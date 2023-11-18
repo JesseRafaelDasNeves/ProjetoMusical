@@ -1,6 +1,11 @@
 ﻿//  Screen Sound
 
 //List<string> bandas = new List<string>{"Teste Direto 1", "Teste Direto 2"};
+using ScreenSound.Model;
+
+Banda ira = new("Ira");
+Banda beatles = new("The Beatles");
+
 Dictionary<string, List<int>> bandas = new Dictionary<string, List<int>>();
 carregaBaseInicial();
 
@@ -149,3 +154,5 @@ void exibirMediaBanda() {
 }
 
 exibirOpcoesMenu();
+
+Banda banda = new("teste");

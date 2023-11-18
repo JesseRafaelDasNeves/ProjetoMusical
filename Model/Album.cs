@@ -1,3 +1,5 @@
+using ScreenSound.Model;
+
 class Album {
 
     public Album(string nome) {

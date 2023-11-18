@@ -1,3 +1,5 @@
+using ScreenSound.Model;
+
 class Musica {
 
     public Musica(Banda artista, string nome) {
