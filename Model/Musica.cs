@@ -1,6 +1,6 @@
-using ScreenSound.Model;
+using ProjetoMusical.Model;
 
-class Musica {
+internal class Musica {
 
     public Musica(Banda artista, string nome) {
         this.Artista = artista;

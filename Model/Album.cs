@@ -1,14 +1,17 @@
-using ScreenSound.Model;
+namespace ProjetoMusical.Model;
 
-class Album {
+internal class Album {
 
     public Album(string nome) {
         this.Nome = nome;
+        Album.qteObjetosAlbum++;
     }
     private List<Musica> musicas = new();
     public string Nome { get; }
 
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
+
+    public static int qteObjetosAlbum = 0;
 
     public void AdicionaMusica(Musica musica) {
         musicas.Add(musica);
