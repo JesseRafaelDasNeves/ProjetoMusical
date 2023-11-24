@@ -4,8 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuRegistrarBanda : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas) {
-        Console.Clear();
+    public override void Executar(Dictionary<string, Banda> bandas) {
+        base.Executar(bandas);
         ExibirTituloOpcao("Registro de Bandas");
         Console.Write("Digite o nome da banda que voçê deseja registrar: ");
         string nomeBanda = Console.ReadLine()!;

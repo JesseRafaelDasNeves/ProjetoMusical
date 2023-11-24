@@ -4,7 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuRegistrarAlbum : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas) {
+    public override void Executar(Dictionary<string, Banda> bandas) {
+        base.Executar(bandas);
         ExibirTituloOpcao("Registrar Album");
         Console.Write("Digite o nome da banda cuja album queira criar: ");
         string nomeBanda = Console.ReadLine()!;

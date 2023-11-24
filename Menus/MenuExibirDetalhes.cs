@@ -4,7 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuExibirDetalhes : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas){
+    public override void Executar(Dictionary<string, Banda> bandas){
+        base.Executar(bandas);
         ExibirTituloOpcao("Detalhar Banda");
         Console.Write("Digite o nome da banda para pesquisar: ");
         string nomeBanda = Console.ReadLine()!;

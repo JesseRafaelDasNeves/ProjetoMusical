@@ -4,7 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuMostrarBandas : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas) {
+    public override void Executar(Dictionary<string, Banda> bandas) {
+        base.Executar(bandas);
         Console.Clear();
         ExibirTituloOpcao("Mostrar Bandas Registradas");
 

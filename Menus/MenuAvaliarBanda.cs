@@ -4,7 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuAvaliarBanda : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas) {
+    public override void Executar(Dictionary<string, Banda> bandas) {
+        base.Executar(bandas);
         ExibirTituloOpcao("Avaliar Banda");
         Console.Write("Digite o nome da banda para avaliar: ");
         string nomeBanda = Console.ReadLine()!;

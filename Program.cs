@@ -4,10 +4,12 @@ using ProjetoMusical.Menus;
 using ProjetoMusical.Model;
 
 Dictionary<string, Banda> bandas = new();
+Dictionary<int,Menu> opcoesMenu = new();
 Comeca();
 
 void Comeca() {
     CriaBaseInicial();
+    CriaOpcoesMenu();
     ExibirOpcoesMenu();
 }
 
@@ -35,45 +37,24 @@ void ExibirOpcoesMenu() {
     Console.Write("\nDigite uma opção ");
     int opcaoEscolhida = int.Parse(Console.ReadLine()!);
 
-    switch (opcaoEscolhida) {
-        case 1: 
-            MenuRegistrarBanda menuRegBanda = new();
-            menuRegBanda.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case 2: 
-            MenuMostrarBandas menuBandas = new();
-            menuBandas.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case 3: 
-            MenuAvaliarBanda menuAvaliar = new();
-            menuAvaliar.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case 4: 
-            MenuExibirMediaBanda menuExibirMedia = new();
-            menuExibirMedia.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case 5: 
-            MenuExibirDetalhes menuDetalhes = new();
-            menuDetalhes.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case 6: 
-            MenuRegistrarAlbum menuRegAlbum = new();
-            menuRegAlbum.Executar(bandas);
-            ExibirOpcoesMenu();
-            break;
-        case -1: 
-            Console.WriteLine("Tchau Tchau :)");
-            break;
-        default: 
-            Console.WriteLine("Opção inválida!");
-            ExibirOpcoesMenu();
-            break;
+    Menu opcaoMenuEscolhido = opcoesMenu[opcaoEscolhida];
+    opcaoMenuEscolhido.Executar(bandas);
+
+    if(opcaoEscolhida != -1) {
+        ExibirOpcoesMenu();
+    } else if(opcaoEscolhida > 6) {
+        Console.WriteLine("Opção inválida!");
     }
+}
+
+void CriaOpcoesMenu() {
+    opcoesMenu.Add(1, new MenuRegistrarBanda());
+    opcoesMenu.Add(2, new MenuMostrarBandas());
+    opcoesMenu.Add(3, new MenuAvaliarBanda());
+    opcoesMenu.Add(4, new MenuExibirMediaBanda());
+    opcoesMenu.Add(5, new MenuExibirDetalhes());
+    opcoesMenu.Add(6, new MenuRegistrarAlbum());
+    opcoesMenu.Add(-1, new MenuSair());
 }
 
 void CriaBaseInicial() {
@@ -85,6 +66,5 @@ void CriaBaseInicial() {
     bandas.Add(ira.Nome, ira);
 
     Banda beatles = new("The Beatles");
-
     bandas.Add(beatles.Nome, beatles);
 }

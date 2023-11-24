@@ -4,7 +4,8 @@ namespace ProjetoMusical.Menus;
 
 internal class MenuExibirMediaBanda : Menu {
 
-    public void Executar(Dictionary<string, Banda> bandas) {
+    public override void Executar(Dictionary<string, Banda> bandas) {
+        base.Executar(bandas);
         ExibirTituloOpcao("Media de Banda");
         Console.WriteLine("Digite o nome da banda que deseja saber a média de nota: ");
         string nomeBanda = Console.ReadLine()!;
