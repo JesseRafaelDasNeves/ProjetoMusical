@@ -32,17 +32,19 @@ void ExibirOpcoesMenu() {
     Console.WriteLine("Digite 4 para exibir a média de uma banda");
     Console.WriteLine("Digite 5 para exibir detalhas de uma banda");
     Console.WriteLine("Digite 6 para registrar o album de uma banda");
+    Console.WriteLine("Digite 7 para Avaliar o album de uma banda");
     Console.WriteLine("Digite -1 para sair");
 
     Console.Write("\nDigite uma opção ");
     int opcaoEscolhida = int.Parse(Console.ReadLine()!);
 
-    Menu opcaoMenuEscolhido = opcoesMenu[opcaoEscolhida];
-    opcaoMenuEscolhido.Executar(bandas);
-
-    if(opcaoEscolhida != -1) {
-        ExibirOpcoesMenu();
-    } else if(opcaoEscolhida > 6) {
+    if(opcoesMenu.ContainsKey(opcaoEscolhida)) {
+        Menu opcaoMenuEscolhido = opcoesMenu[opcaoEscolhida];
+        opcaoMenuEscolhido.Executar(bandas);
+        if(opcaoEscolhida > 0) {
+            ExibirOpcoesMenu();
+        }
+    } else {
         Console.WriteLine("Opção inválida!");
     }
 }
@@ -54,6 +56,7 @@ void CriaOpcoesMenu() {
     opcoesMenu.Add(4, new MenuExibirMediaBanda());
     opcoesMenu.Add(5, new MenuExibirDetalhes());
     opcoesMenu.Add(6, new MenuRegistrarAlbum());
+    opcoesMenu.Add(7, new MenuAvaliarAlbum());
     opcoesMenu.Add(-1, new MenuSair());
 }
 

@@ -1,9 +1,12 @@
+using System.Dynamic;
+
 namespace ProjetoMusical.Model;
 
-internal class Banda {
+internal class Banda : IAvaliavel {
 
-    public List<Album> Albums = new();
-    public List<Avaliacao> notas = new();
+    private readonly List<Album> albums = new();
+    public IEnumerable<Album> Albums => albums;
+    private List<Avaliacao> notas = new();
     public double Media {
         get {
             if(notas.Count == 0) return 0;
@@ -17,7 +20,7 @@ internal class Banda {
     public string Nome { get;}
 
     public void AdicionaAlbum(Album album) {
-        Albums.Add(album);
+        this.albums.Add(album);
     }
 
     public void AddNota(Avaliacao nota) {
@@ -27,7 +30,7 @@ internal class Banda {
     public string DescricaoDiscografia() {
         string descricao = $"Discografia da banda {this.Nome}";
         foreach(Album album in this.Albums) {
-            descricao += $"\nAlbum: {album.Nome} ({album.DuracaoTotal})";
+            descricao += $"\nAlbum: {album.Nome}, (Duração Total: {album.DuracaoTotal}), (Média: {album.Media})";
         }
         return descricao;
     }
