@@ -1,10 +1,10 @@
 ﻿//  Screen Sound
-//List<string> bandas = new List<string>{"Teste Direto 1", "Teste Direto 2"};
 using ProjetoMusical.Menus;
 using ProjetoMusical.Model;
 
 Dictionary<string, Banda> bandas = new();
 Dictionary<int,Menu> opcoesMenu = new();
+
 Comeca();
 
 void Comeca() {

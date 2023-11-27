@@ -26,3 +26,17 @@ C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\refint\CharpProjetoMusical.dl
 C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\CharpProjetoMusical.pdb
 C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\CharpProjetoMusical.genruntimeconfig.cache
 C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\ref\CharpProjetoMusical.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Http.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\projetos\Ccharp\ProjetoMusical\bin\Debug\net7.0\OpenAI_API.dll
+C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\CharpProjetoMusical.csproj.AssemblyReference.cache
+C:\projetos\Ccharp\ProjetoMusical\obj\Debug\net7.0\CharpProjetoMusical.csproj.CopyComplete

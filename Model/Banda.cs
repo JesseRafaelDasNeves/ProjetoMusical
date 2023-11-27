@@ -14,6 +14,8 @@ internal class Banda : IAvaliavel {
         }
     }
 
+    public string? Resumo { get; set; }
+
     public Banda(string nome) {
         this.Nome = nome;
     }
@@ -48,6 +50,7 @@ internal class Banda : IAvaliavel {
 
     public string DescricaoCompleta() {
         string descricao = $"===BANDA {this.Nome}===";
+        descricao += "\nResumo: " + this.Resumo;
         descricao += "\n" + DescricaoDiscografia();
         descricao += "\n";
         descricao += "\n" + DescricaoNotas();
